@@ -33,7 +33,7 @@ jobs:
       run: dotnet build --no-restore
 
     - name: Login to Azure Container Registry.
-    - uses: azure/docker-login@v2
+      uses: azure/docker-login@v2
       with:
         # !!!!! LOGIN SERVER sa zistuje pomocou COMMAND [az acr list].
         login-server: mybookcontainer.azurecr.io
