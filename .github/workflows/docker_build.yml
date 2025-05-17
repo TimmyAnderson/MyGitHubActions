@@ -42,7 +42,10 @@ jobs:
         username: ${{ secrets.AZURE_CONTAINER_REGISTRY_USERNAME }}
         password: ${{ secrets.AZURE_CONTAINER_REGISTRY_PASSWORD }}
 
-
-
-
+    - name: Push to Azure Container Registry.
+      run: |
+        # !!!!! Vytvori sa BUILD DOCKER IMAGE.
+        docker build -f ${{ github.workspace }}/MyGitHubActionsProgram/Dockerfile -t mybookcontainer.azurecr.io/mygithubactionsprogram:${{ github.run_id }} -t mybookcontainer.azurecr.io/mygithubactionsprogram:latest .
+        #docker push devopscrlab.azurecr.io/myazurepipelinesdemo:${{ github.run_id }}
+        #docker push devopscrlab.azurecr.io/myazurepipelinesdemo:latest   
 
