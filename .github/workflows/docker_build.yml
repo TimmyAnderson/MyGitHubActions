@@ -39,8 +39,8 @@ jobs:
         login-server: mybookcontainer.azurecr.io
         # !!!!! USERNAME a PASSWORD sa zistuju pomocou COMMAND [az acr credential show --name mybookcontainer].
         # !!!!! USERNAME a PASSWORD musia byt ulozene ako ENVIRONMENT SECRET VARIABLES v GITHUB REPOSITORY.
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
+        username: ${{ secrets.AZURE_CONTAINER_REGISTRY_USERNAME }}
+        password: ${{ secrets.AZURE_CONTAINER_REGISTRY_PASSWORD }}
 
 
 
